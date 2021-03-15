@@ -12,7 +12,7 @@ public class DBUtil {
     private static Connection conn;
     private static final String USER = "root";
     private static final String PASSWORD = "";
-    private static final String URl = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8";
+    private static final String URl = "jdbc:mysql://localhost:3306/qlsp?useUnicode=true&characterEncoding=UTF-8";
 
     public static Connection getConnection() {
         // load the driver
@@ -23,9 +23,7 @@ public class DBUtil {
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-
         return conn;
-
     }
 
     public static void close(Connection conn) {
